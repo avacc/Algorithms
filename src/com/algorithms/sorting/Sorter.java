@@ -203,5 +203,108 @@ public class Sorter {
         return sorted;
     }
 
+    /**
+     * Sort the array by iteratively sorting based on one place-value,
+     * starting from the least significant digit
+     *
+     * Stable?: Yes
+     * Running Time: O(n)
+     *
+     * @param unsorted - The unsorted array
+     * @param numDigits - The highest number of digits in the array
+     * @return
+     */
+    public static int[] radixSort(int[] unsorted, int numDigits) {
+        if (unsorted.length == 0)
+            return unsorted;
 
+        int[] sorted = new int[unsorted.length];
+        for (int i = 0; i < unsorted.length; i++)
+            sorted[i] = unsorted[i];
+
+        // start from the least significant digit
+        for (int d = 0; d < numDigits; d++)
+            sorted = stableSortOnDigits(sorted, d);
+        return sorted;
+    }
+
+
+    /**
+     *
+     * @param left
+     * @param right
+     * @return
+     */
+    public static int[] mergeV1(int[] left, int[] right) {
+        int[] mergedArr = new int[left.length + right.length];
+        int leftIdx = 0;
+        int rightIdx = 0;
+        int mergedIdx = 0;
+
+        // merge for as long as there are elements in both arrays
+        while ((leftIdx < left.length) && (rightIdx < right.length)) {
+            if (left[leftIdx] < right[rightIdx])
+                mergedArr[mergedIdx++] = left[leftIdx++];
+            else
+                mergedArr[mergedIdx++] = right[rightIdx++];
+        }
+
+        // copy the remaining elements to the result
+        if (leftIdx < left.length)
+            System.arraycopy(left, leftIdx, mergedArr, mergedIdx, left.length - leftIdx);
+        else if (rightIdx < right.length)
+            System.arraycopy(right, rightIdx, mergedArr, mergedIdx, right.length - rightIdx);
+        return mergedArr;
+    }
+
+    /**
+     *
+     * @param left
+     * @param right
+     * @return
+     */
+    public static int[] mergeV2(int[] left, int[] right) {
+        int[] mergedArr = new int[left.length + right.length];
+        int leftIdx = 0;
+        int rightIdx = 0;
+        int mergedIdx = 0;
+
+        // merge for as long as there are elements in both arrays
+        while ((leftIdx < left.length) && (rightIdx < right.length)) {
+            if (left[leftIdx] <= right[rightIdx])
+                mergedArr[mergedIdx++] = left[leftIdx++];
+            else
+                mergedArr[mergedIdx++] = right[rightIdx++];
+        }
+
+        // copy the remaining elements to the result
+        if (leftIdx < left.length)
+            System.arraycopy(left, leftIdx, mergedArr, mergedIdx, left.length - leftIdx);
+        else if (rightIdx < right.length)
+            System.arraycopy(right, rightIdx, mergedArr, mergedIdx, right.length - rightIdx);
+        return mergedArr;
+    }
+
+    /**
+     *
+     */
+    public static int[] mergeSort(int[] unsorted, boolean stable) {
+        if (unsorted.length <= 1)
+            return unsorted;
+
+        // split the array
+        int medIdx = unsorted.length / 2;
+        int[] leftArr = new int[medIdx];
+        int[] rightArr = new int[unsorted.length - medIdx];
+
+        System.arraycopy(unsorted, 0, leftArr, 0, leftArr.length);
+        System.arraycopy(unsorted, medIdx, rightArr, 0, rightArr.length);
+
+        // sort each part
+        leftArr = mergeSort(leftArr, stable);
+        rightArr = mergeSort(rightArr, stable);
+
+        // merge the two parts together
+        return stable ? mergeV2(leftArr, rightArr) : mergeV1(leftArr, rightArr);
+    }
 }
