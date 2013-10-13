@@ -13,7 +13,7 @@
     <file path="/Main.java" changelist="59b2b862-b172-46c2-9ebd-3563f629eddd" time="1381626265506" ignored="false" />
     <file path="/Sort.java" changelist="59b2b862-b172-46c2-9ebd-3563f629eddd" time="1381627760143" ignored="false" />
     <file path="/Sorter.java" changelist="59b2b862-b172-46c2-9ebd-3563f629eddd" time="1381627738377" ignored="false" />
-    <file path="/Dummy.txt" changelist="59b2b862-b172-46c2-9ebd-3563f629eddd" time="1381628185393" ignored="false" />
+    <file path="/Dummy.txt" changelist="59b2b862-b172-46c2-9ebd-3563f629eddd" time="1381628270025" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -73,19 +73,19 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="Main.java" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="Main.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/algorithms/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="8" column="74" selection-start="124" selection-end="124" vertical-scroll-proportion="0.13921113">
+            <state line="5" column="28" selection-start="115" selection-end="115" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Sorter.java" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="Sorter.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/com/algorithms/sorting/Sorter.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="14" column="8" selection-start="292" selection-end="292" vertical-scroll-proportion="0.0">
+            <state line="14" column="8" selection-start="292" selection-end="292" vertical-scroll-proportion="0.24361949">
               <folding />
             </state>
           </provider>
@@ -299,14 +299,18 @@
       <created>1381628198884</created>
       <updated>1381628198884</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Initial Commit">
+      <created>1381628273147</created>
+      <updated>1381628273147</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="ToolWindowManager">
     <frame x="12" y="31" width="1660" height="1010" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32921347" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="JetGradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -390,16 +394,16 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/com/algorithms/sorting/Sorter.java">
+    <entry file="file://$PROJECT_DIR$/src/com/algorithms/Main.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="14" column="8" selection-start="292" selection-end="292" vertical-scroll-proportion="0.0">
+        <state line="5" column="28" selection-start="115" selection-end="115" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/algorithms/Main.java">
+    <entry file="file://$PROJECT_DIR$/src/com/algorithms/sorting/Sorter.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="8" column="74" selection-start="124" selection-end="124" vertical-scroll-proportion="0.13921113">
+        <state line="14" column="8" selection-start="292" selection-end="292" vertical-scroll-proportion="0.24361949">
           <folding />
         </state>
       </provider>
