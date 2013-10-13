@@ -58,7 +58,7 @@ public class Sorter {
         if (unsorted.length == 0)
             return unsorted;
 
-        int[] counts = new int[maxKey+1]     // counts for each key
+        int[] counts = new int[maxKey+1];     // counts for each key
         int[] sorted = new int[unsorted.length];
 
         for (int j = 0; j < unsorted.length; j++)
